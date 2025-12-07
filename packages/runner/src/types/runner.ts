@@ -19,26 +19,26 @@ import type {
 export interface VitestRunnerConfig {
   root: string
   setupFiles: string[]
-  name?: string
+  name?: string | undefined
   passWithNoTests: boolean
-  testNamePattern?: RegExp
-  allowOnly?: boolean
+  testNamePattern?: RegExp | undefined
+  allowOnly?: boolean | undefined
   sequence: {
-    shuffle?: boolean
-    concurrent?: boolean
+    shuffle?: boolean | undefined
+    concurrent?: boolean | undefined
     seed: number
     hooks: SequenceHooks
     setupFiles: SequenceSetupFiles
   }
   chaiConfig?: {
     truncateThreshold?: number
-  }
+  } | undefined
   maxConcurrency: number
   testTimeout: number
   hookTimeout: number
   retry: number
-  includeTaskLocation?: boolean
-  diffOptions?: DiffOptions
+  includeTaskLocation?: boolean | undefined
+  diffOptions?: DiffOptions | undefined
 }
 
 /**
